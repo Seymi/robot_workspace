@@ -1,13 +1,15 @@
 *** Settings ***
 Library  Selenium2Library
+Variables  ../../cfg/credentials.py
+#Variables  ../../cfg/cred.py
+
 
 *** Variables ***
 ${SERVER}  localhost:5000
 ${BROWSER}  firefox
 ${DELAY}  0
-${VALID USER}  martin.seymann@chello.at
-${VALID PASSWD}  strengGeheim
-
+${VALID USER}=  ${credentials["user"]}
+${VALID PASSWD}  ${credentials["password"]}
 ${LOGIN URL}  https://apex.oracle.com/pls/apex/f?p=69537:LOGIN_DESKTOP
 ${SUCCESS URL}  https://apex.oracle.com/pls/apex/f?p=69537:1
 
@@ -17,6 +19,10 @@ open Login Page
   Open Browser  ${LOGIN URL}  ${BROWSER}
   Set Selenium Speed  ${DELAY}
   Title Should Be  Laufen - Anmelden
+
+  #Log  cred: ${cred}
+  Log  user_json: ${VALID USER}
+  Log  password_json: ${VALID PASSWD}
 
 Perform Wrong credentials  
   GO TO  ${LOGIN URL}
