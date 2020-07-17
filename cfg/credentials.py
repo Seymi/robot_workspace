@@ -1,1 +1,1 @@
-credentials = { 'user' : 'user', 'password' : 'geheim' }
+credentials = { 'user' : 'martin.seymann@chello.at', 'password' : 'Seymi4Apex' }
