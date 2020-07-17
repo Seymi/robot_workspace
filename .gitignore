@@ -1,2 +1,6 @@
 .history
 *.bak
+output*.xml
+report*.html
+log*.html
+geckodriver*.log

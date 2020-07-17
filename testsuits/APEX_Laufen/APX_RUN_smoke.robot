@@ -3,10 +3,10 @@ Library  Selenium2Library
 Variables  ../../cfg/credentials.py
 #Variables  ../../cfg/cred.py
 
-
 *** Variables ***
 ${SERVER}  localhost:5000
-${BROWSER}  firefox
+${BROWSER}  chrome
+#${BROWSER}  firefox
 ${DELAY}  0
 ${VALID USER}=  ${credentials["user"]}
 ${VALID PASSWD}  ${credentials["password"]}

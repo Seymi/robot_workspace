@@ -4,7 +4,8 @@ node {
         echo 'Wird beim Build in der Jenkinspipeline aufgerufen' 
     }
     stage('Test') {
-        robot testsuites/APEX_Laufen
+        //robot testsuites/APEX_Laufen
+        RobotJob
     }
     stage('set_finish') {
         echo 'setze finish Status' 
